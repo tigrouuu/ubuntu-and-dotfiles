@@ -1,0 +1,7 @@
+# global options
+User nom_d_utilisateur
+
+# host-specific options
+Host myserver
+    HostName hôte_de_connexion
+    Port     22
