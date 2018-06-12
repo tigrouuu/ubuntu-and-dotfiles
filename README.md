@@ -8,7 +8,7 @@ C'est un repo à titre personnel, mais qui peut aider bien d'autres personnes. E
 
 ## Pourquoi ?
 
-Pour installer plus rapidement le système d'exploitation [Archlinux](https://github.com/tigrouuu/archlinux-and-dotfiles/blob/master/ARCHLINUX.md) avec tout l'univers de développement web. Programmant sous PHP, un serveur [LAMP](https://github.com/tigrouuu/archlinux-and-dotfiles/blob/master/LAMP.md) est nécessaire.
+Pour installer plus rapidement le système d'exploitation [Archlinux](https://github.com/tigrouuu/archlinux-and-dotfiles/blob/master/ARCHLINUX.md) avec tout l'univers de développement web. Programmant sous PHP, un serveur [LAMP](https://github.com/tigrouuu/archlinux-and-dotfiles/blob/master/LAMP/README.md) est nécessaire.
 
 ## Quoi d'autres ?
 
