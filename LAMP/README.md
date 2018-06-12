@@ -194,6 +194,7 @@ Lancer **Atom** pour modifier le fichier :
 `$ sudo atom /etc/httpd/conf/httpd.conf`
 
 Décommenter : `Include conf/extra/httpd-vhosts.conf`
+Ajouter à la fin : `ServerName code.local:80` (évite l'erreur AH00558)
 
 Lancer **Atom** pour modifier le fichier :
 
@@ -201,23 +202,24 @@ Lancer **Atom** pour modifier le fichier :
 
 ```
 <VirtualHost *:80>
-    DocumentRoot "/srv/http/code"
-    ServerName code.local
-    ServerAlias www.code.local
+    DocumentRoot "/srv/http/"
+    ServerName http://code.local
+    ServerAlias http://www.code.local
     ErrorLog /var/log/httpd/code.local.error.log
     CustomLog /var/log/httpd/code.local.access.log common
 
-    <Directory "/srv/http/code">
-       # Options FollowSymLinks
-       # AllowOverride All
-       # Order allow,deny
-       # Allow from all
+    <Directory "/srv/http/">
        Require all granted
     </Directory>
 </VirtualHost>
+
 ```
 
-Créer le dossier **code** dans **/srv/http**, puis vérifier que tout fonctionne bien :
+Redémarrer le service Apache pour prendre en compte toutes les modifications :
+
+`$ sudo systemctl restart httpd.service`
+
+Puis vérifier que tout fonctionne bien :
 
 `apachectl configtest`
 
