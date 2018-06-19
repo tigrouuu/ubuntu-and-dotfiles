@@ -238,4 +238,4 @@ Installer (AUR ou pas) :
 - phpunit
 - ruby
 - sassc
-- xdebug
+- xdebug (mettre dans **php.ini** `zend_extension="/usr/lib/php/modules/xdebug.so"`, puis **apacheR** et **php -m** dans le terminal)
