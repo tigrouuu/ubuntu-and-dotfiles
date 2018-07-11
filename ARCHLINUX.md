@@ -91,3 +91,5 @@ FONT=lat9w-16
 Dans `/etc/locale.conf`, vérifier qu'il y a bien `LANG=fr_FR.UTF-8` et `LC_COLLATE=C`.
 
 Dans `/etc/locale.gen`, vérifier que `fr_FR.UTF-8 UTF-8` soit décommenté.
+
+Installer `matcha-gtk-theme` via le gestionnaire de paquets. [Plus d'info ici](https://github.com/vinceliuice/matcha).
