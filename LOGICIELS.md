@@ -25,6 +25,6 @@
 - Steam
 - Teamviewer
 - Transmission
-- VirtualBox
+- VirtualBox (module en fonction du noyau, virtualbox-ext-oracle et sudo gpasswd -a tigrou vboxusers)
 - Visual Studio Code
 - VLC
