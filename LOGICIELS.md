@@ -4,8 +4,10 @@
 
 - Android File Transfer
 - Atom
+- BleachBit
 - Composer
 - Dropbox
+- Etcher
 - Filezilla
 - Firefox
 - GIMP
@@ -23,6 +25,7 @@
 - Signal
 - Spotify
 - Steam
+- Sweeper
 - Teamviewer
 - Transmission
 - VirtualBox (module en fonction du noyau, virtualbox-ext-oracle et sudo gpasswd -a tigrou vboxusers)
