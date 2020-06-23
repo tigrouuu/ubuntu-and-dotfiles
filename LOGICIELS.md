@@ -1,33 +1,33 @@
 # Logiciels à installer
 
-## De base
+## Installation via apt-url :
+- alacarte
+- Composer (installer PHP d'abord + installer globalement)
+- Filezilla
+- Gimp
+- Gparted
+- Git
+- Gufw
+- Handbrake (et cli)
+- Krita
+- OBS Studio
+- Remmina
+- Spotify
+- Transmission (et cli)
+- Vlc
 
-- Android File Transfer
-- Atom
-- BleachBit
-- Composer
+## Installation via leur site :
 - Dropbox
 - Etcher
-- Filezilla
-- Firefox
-- GIMP
-- Git
 - Gitkraken
-- Gparted
-- Grub customizer
-- Gufw
-- Handbrake
-- Krita
-- Libreoffice
-- OBS Studio
-- Neofetch
-- PlayOnLinux
-- Signal
-- Spotify
+- Postman (https://tutorialforlinux.com/2020/02/06/step-by-step-postman-ubuntu-20-04-installation-guide/)
 - Steam
-- Sweeper
 - Teamviewer
-- Transmission
-- VirtualBox (module en fonction du noyau, virtualbox-ext-oracle et sudo gpasswd -a tigrou vboxusers)
 - Visual Studio Code
-- VLC
+
+## Installation optionnelle :
+- Neofetch
+- Virtualbox
+- Wine
+
+Terminer en installant les langues additionnelles en français.
