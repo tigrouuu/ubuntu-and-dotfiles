@@ -14,8 +14,8 @@ Pour installer plus rapidement le système d'exploitation [Ubuntu](https://githu
 
 Une base de [logiciels](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/LOGICIELS.md) devra être installée. C'est ce qui me sert assez souvent.
 
-Le dossier [Localhost](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/Localhost/README.md) permet d'avoir une page d'accueil plus jolie lorsqu'on va sur [http://localhost](http://localhost).
+Le dossier [Localhost](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/Localhost) permet d'avoir une page d'accueil plus jolie lorsqu'on va sur [http://localhost](http://localhost).
 
-Le dossier [Shell](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/Shell/README.md) contient la configuration pour améliorer le shell de mon terminal ainsi que celui sur mon hébergeur.
+Le dossier [Shell](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/Shell) contient la configuration pour améliorer le shell de mon terminal ainsi que celui sur mon hébergeur.
 
-Le dossier [Git](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/Git/README.md) contient la configuration pour utiliser git avec mon compte Github.
+Le dossier [Git](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/Git) contient la configuration pour utiliser git avec mon compte Github.
