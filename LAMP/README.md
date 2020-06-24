@@ -1,6 +1,6 @@
 # Linux Apache MariaDB PHP
 
-Petit mémo personnel pour installer un [LAMP](https://wiki.archlinux.fr/LAMP) rapidement !
+Petit mémo personnel pour installer un [LAMP](https://doc.ubuntu-fr.org/lamp) rapidement !
 
 ### Sommaire
 
@@ -10,62 +10,27 @@ Petit mémo personnel pour installer un [LAMP](https://wiki.archlinux.fr/LAMP) r
 - Adminer
 - Virtual Host
 
-> Pour ouvrir un fichier, j'utilise **Atom** pour sortir du **Terminal**. Si vous ne l'avez pas, utilisez autre chose comme nano, vim etc.
+> Pour ouvrir un fichier, j'utilise **Visual Studio Code** pour sortir du **Terminal**. Si vous ne l'avez pas, utilisez autre chose comme nano, vim etc.
+
+Avant tout :
+
+`$ sudo apt-get clean; sudo apt-get autoclean; sudo apt-get autoremove; sudo apt-get update; sudo apt-get upgrade`
 
 ## Apache
 
 Installer Apache :
 
-`$ sudo pacman -S apache`
+`$ sudo apt install apache2`
 
-Lancer **Atom** pour modifier le fichier :
+Ajouter Apache en liste blanche pour le parefeu **ufw** :
 
-`$ sudo atom /etc/httpd/conf/httpd.conf`
-
-Décommenter : `#LoadModule unique_id_module modules/mod_unique_id.so`
-
-Démarrer le service Apache pour la session en cours :
-
-`$ sudo systemctl start httpd`
-
-Lancer automatiquement Apache lorsque vous démarrez votre PC :
-
-`$ sudo systemctl enable httpd`
-
-Ouvrez **Atom** pour créer le fichier **index.html**
-
-`$ sudo atom /srv/http/index.html`
-
-```html
-<html>
- <title>Tigrou</title>
-  <body>
-   <h2>Welcome to Archlinux</h2>
-  </body>
-</html>
-```
-
-Tester la page en allant sur [Localhost](http://localhost).
+`$ sudo ufw allow in "Apache"`
 
 ## MariaDB
 
 Installer le gestionnaire de base de données MariaDB, remplaçant de MySQL :
 
-`$ sudo pacman -S mariadb`
-
-Les tables devraient être mises en place :
-
-`$ sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`
-
-Démarrer le service MySQL pour la session en cours :
-
-`$ sudo systemctl start mysqld`
-
-Lancer automatiquement MySQL lorsque vous démarrez votre PC :
-
-`$ sudo systemctl enable mysqld`
-
-`$ sudo systemctl status mysqld.service` (q pour quitter)
+`$ sudo apt install mariadb-server`
 
 Sécuriser l'installation de MySQL après le démarrage du service :
 
@@ -79,27 +44,16 @@ Configurer MySQL en vous connectant en **root** :
 
 Installer PHP :
 
-`$ sudo pacman -S php php-apache`
+`$ sudo apt install php libapache2-mod-php php-mysql`
+`$ sudo apt install php-curl php-gd php-intl php-json php-mbstring php-xml php-zip`
 
-Lancer **Atom** pour modifier le fichier :
+Vérifier que PHP soit bien à la version 7.4.* :
 
-`$ sudo atom /etc/httpd/conf/httpd.conf`
-
-Commenter : `LoadModule mpm_event_module modules/mod_mpm_event.so`
-Décommenter : `LoadModule mpm_prefork_module modules/mod_mpm_prefork.so`
-
-Ajouter à la fin des **LoadModule** :
-
-LoadModule php7_module modules/libphp7.so
-AddHandler php7-script php
-
-Ajouter à la fin des **Includes** :
-
-Include conf/extra/php7_module.conf
+`$ php -v`
 
 Ouvrez **Atom** pour créer le fichier **phpinfo.php**
 
-`$ sudo nano /srv/http/phpinfo.php`
+`$ sudo nano /var/www/html/phpinfo.php`
 
 ```php
 <?php phpinfo(); ?>
@@ -107,51 +61,13 @@ Ouvrez **Atom** pour créer le fichier **phpinfo.php**
 
 Tester la page en allant sur [Localhost/phpinfo.php](http://localhost/phpinfo.php).
 
-Configurer PHP en ouvrant **Atom** :
-
-`$ sudo atom /etc/php/php.ini`
-
-Modifier tout ce qui suit (ajouter, modifier, (dé)commenter) :
-
-```ini
-date.timezone = Europe/Paris
-
-display_errors = On
-
-extension=bz2
-extension=gd
-extension=mysqli
-extension=pdo_mysql
-extension=pdo_sqlite
-```
-
-Installer le paquet **sqlite** :
-
-`$ sudo pacman -S sqlite`
-
-Sur la page [Localhost/phpinfo.php](http://localhost/phpinfo.php), vérifier que **sqlite** est activé dans **PDO drivers**.
-
-Redémarrer le service Apache pour prendre en compte toutes les modifications :
-
-`$ sudo systemctl restart httpd.service`
-
-Tester la page en allant sur [Localhost/phpinfo.php](http://localhost/phpinfo.php).
-
 ## Adminer
 
-Installer Adminer avec AUR.
+Installer Adminer avec le fichier php.
 
 Lancer **Atom** pour modifier le fichier :
 
 `$ sudo atom /etc/httpd/conf/httpd.conf`
-
-Ajouter à la fin des **Includes** :
-
-`Include conf/extra/httpd-adminer.conf`
-
-Redémarrer le service Apache pour prendre en compte toutes les modifications :
-
-`$ sudo systemctl restart httpd.service`
 
 Tester la page en allant sur [Localhost/adminer](http://localhost/adminer).
 
