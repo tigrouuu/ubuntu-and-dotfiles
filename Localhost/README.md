@@ -4,15 +4,15 @@ Cette page d'accueil pour **Localhost** répertorie automatiquement les dossiers
 
 ## Installation
 
-Si vous avez suivi toute l'installation d'un serveur [LAMP](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/LAMP), vous devriez avoir un Virtual Host avec pour adresse [http://code.local](http://code.local) pointant sur **/var/www/http**.
+Si vous avez suivi toute l'installation d'un serveur [LAMP](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/LAMP), vous devriez avoir un Virtual Host avec pour adresse [http://code.local](http://code.local) pointant sur **/var/www/html**.
 
-[Télécharger](https://github.com/tigrouuu/ubuntu-and-dotfiles/archive/master.zip) ce répertoire, l'extraire et copier tout ce qui se trouve dans le dossier `Localhost` à l'exception du fichier README.md dans **/var/www/http**. Vous devez également créer deux dossiers : **Code** et **Folders**.
+[Télécharger](https://github.com/tigrouuu/ubuntu-and-dotfiles/archive/master.zip) ce répertoire, l'extraire et copier tout ce qui se trouve dans le dossier `Localhost` à l'exception du fichier README.md dans **/var/www/html**. Vous devez également créer deux dossiers : **Code** et **Folders**.
 
 **Code** est le dossier qui sera listé sur la page d'accueil lorsque vous irez sur [http://code.local](http://code.local).
 
 **Folders** est un dossier où vous pouvez tout mettre, permettant de ne pas être listé sur la page d'accueil.
 
-La structure de votre dossier **/var/www/http** doit ressembler à la capture ci-dessous.
+La structure de votre dossier **/var/www/html** doit ressembler à la capture ci-dessous.
 
 ![alt text](https://raw.githubusercontent.com/tigrouuu/ubuntu-and-dotfiles/master/Screenshots/localhomepage.png)
 
