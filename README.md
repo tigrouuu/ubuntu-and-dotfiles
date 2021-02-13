@@ -10,12 +10,9 @@ C'est un repo à titre personnel, mais qui peut aider bien d'autres personnes. E
 
 Pour installer plus rapidement le système d'exploitation [Ubuntu](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/UBUNTU.md) avec tout l'univers de développement web. Programmant sous PHP, un serveur [LAMP](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/LAMP/README.md) est nécessaire.
 
-## Quoi d'autres ?
+## Sommaire
 
-Une base de [logiciels](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/LOGICIELS.md) devra être installée. C'est ce qui me sert assez souvent.
-
-Le dossier [Localhost](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/Localhost) permet d'avoir une page d'accueil plus jolie lorsqu'on va sur [http://localhost](http://localhost).
-
-Le dossier [Shell](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/Shell) contient la configuration pour améliorer le shell de mon terminal ainsi que celui sur mon hébergeur.
-
-Le dossier [Git](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/Git) contient la configuration pour utiliser git avec mon compte Github.
+1. Tout pour (ré)installer [Ubuntu](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/UBUNTU.md)
+2. Améliorer [Localhost](https://github.com/tigrouuu/ubuntu-and-dotfiles/tree/master/Localhost)
+3. [Git](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/git.md)
+4. Nouveau projet [Laravel](https://github.com/tigrouuu/ubuntu-and-dotfiles/blob/master/laravel.md)
