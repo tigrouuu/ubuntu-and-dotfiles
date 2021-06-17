@@ -13,6 +13,9 @@ unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
 
+;= Site
+site=cd C:\laragon\www\angy && composer update && npm update $*
+
 ;= composer aliases
 
 cr=composer
@@ -32,6 +35,9 @@ pami=php artisan migrate $*
 pads=php artisan db:seed $*
 pas=php artisan serve $*
 tinker=php artisan tinker
+
+paC=php artisan cache:clear && php artisan debugbar:clear && php artisan optimize && php artisan view:cache && composer dump-autoload -o $*
+paR=php artisan migrate:reset && php artisan migrate:refresh --seed $*
 
 ;= npm aliases
 
